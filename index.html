@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#000000c3" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="font-[poppins]">
+    <header
+      class="absolute z-10 bg-[#121212]/50 text-white top-0 w-screen items-center h-auto py-3 px-5 xl:py-2 xl:px-10 flex justify-between"
+    >
+      <h1 class="text-2xl xl:text-3xl font-[500] cursor-default">
+        Bar do Ceará
+      </h1>
+
+      <!-- Menu Hamburguer (mobile) -->
+      <div class="hamburger xl:hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu Desktop -->
+      <ul class="nav-items hidden xl:flex gap-4 uppercase">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">Menu</li>
+        <li class="cursor-pointer">Contact</li>
+        <li class="cursor-pointer">About</li>
+      </ul>
+
+      <ul class="social-icons hidden xl:flex gap-4">
+        <li class="cursor-pointer">
+          <span data-lucide="facebook" class="w-5 h-5 block"></span>
+        </li>
+        <li class="cursor-pointer">
+          <span data-lucide="twitter" class="w-5 h-5 block"></span>
+        </li>
+        <li class="cursor-pointer">
+          <span data-lucide="instagram" class="w-5 h-5 block"></span>
+        </li>
+        <li class="cursor-pointer">
+          <span data-lucide="linkedin" class="w-5 h-5 block"></span>
+        </li>
+      </ul>
+
+      <!-- Menu Mobile -->
+      <div class="mobile-menu text-white">
+        <button class="close-btn text-white">×</button>
+        <ul class="nav-items">
+          <li>Home</li>
+          <li>Menu</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+
+        <ul class="social-icons">
+          <li>
+            <span
+              data-lucide="facebook"
+              class="w-8 h-8 block text-white"
+            ></span>
+          </li>
+          <li>
+            <span data-lucide="twitter" class="w-8 h-8 block text-white"></span>
+          </li>
+          <li>
+            <span
+              data-lucide="instagram"
+              class="w-8 h-8 block text-white"
+            ></span>
+          </li>
+          <li>
+            <span
+              data-lucide="linkedin"
+              class="w-8 h-8 block text-white"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      class="hero w-screen h-screen flex flex-col justify-center items-center text-white"
+    >
+      <h2 class="text-5xl xl:text-7xl font-[500]">Bar do Ceará</h2>
+      <p class="text-2xl xl:text-4xl">Encontro entre amigos</p>
+    </section>
+
+    <section
+      class="secao1 relative w-screen gap-10 bg-[#eeede8] flex flex-col justify-center items-center px-4 py-[5rem] xl:px-[2rem]"
+    >
+      <h2
+        class="text-4xl text-center xl:max-w-[50%] text-[#0f0e0a] uppercase tracking-[-1px]"
+      >
+        A referência de bar e diversão para todas as pessoas
+      </h2>
+      <p class="text-[#6b6b6b] xl:max-w-[60%] text-center">
+        Venha passar o tempo da melhor maneira, beba tudo de bom, coma a melhor
+        culinária da região e viva emoções de todas as formas possíveis!
+      </p>
+
+      <div
+        class="cards flex flex-col xl:flex-row w-screen justify-center items-center gap-[5rem] xl:gap-5"
+      >
+        <div
+          class="card bg-[#E4DFD9] w-[90%] xl:w-[22%] rounded-[1rem] h-auto flex flex-col justify-center items-center py-[2rem] xl:py-[3rem] px-[2rem] xl:px-[1rem]"
+        >
+          <span
+            data-lucide="land-plot"
+            class="w-[3rem] h-[3rem] xl:w-12 xl:h-12 block text-black bg-[#F9E076] rounded-[50%] p-2"
+          ></span>
+          <h3 class="uppercase text-2xl mt-[2rem] xl:mt-[3rem]">
+            Jogos Aovivo
+          </h3>
+          <p class="text-center text-[#6b6b6b] mt-[1rem]">
+            Acompanhe as melhores partidas de futebol enquanto aproveita o
+            ambiente
+          </p>
+        </div>
+
+        <div
+          class="card bg-[#E4DFD9] w-[90%] xl:w-[22%] rounded-[1rem] h-auto flex flex-col justify-center items-center py-[2rem] xl:py-[3rem] px-[2rem] xl:px-[1rem]"
+        >
+          <span
+            data-lucide="message-square-quote"
+            class="w-[3rem] h-[3rem] xl:w-12 xl:h-12 block text-black bg-[#F9E076] rounded-[50%] p-2"
+          ></span>
+          <h3 class="uppercase text-2xl mt-[2rem] xl:mt-[3rem]">
+            Conversa boa
+          </h3>
+          <p class="text-center text-[#6b6b6b] mt-[1rem]">
+           Conte piadas, histórias, vontades e tudo que quiser para quem quiser
+          </p>
+        </div>
+
+        <div
+          class="card bg-[#E4DFD9] w-[90%] xl:w-[22%] rounded-[1rem] h-auto flex flex-col justify-center items-center py-[2rem] xl:py-[3rem] px-[2rem] xl:px-[1rem]"
+        >
+          <span
+            data-lucide="gamepad-2"
+            class="w-[3rem] h-[3rem] xl:w-12 xl:h-12 block text-black bg-[#F9E076] rounded-[50%] p-2"
+          ></span>
+          <h3 class="uppercase text-2xl mt-[2rem] xl:mt-[3rem]">
+            Jogos Fliperama
+          </h3>
+          <p class="text-center text-[#6b6b6b] mt-[1rem]">
+            Quer se distrair? Se divirta com jogos de azar que acontecem a todo momento
+          </p>
+        </div>
+
+        <div
+          class="card bg-[#E4DFD9] w-[90%] xl:w-[22%] rounded-[1rem] h-auto flex flex-col justify-center items-center py-[2rem] xl:py-[3rem] px-[2rem] xl:px-[1rem]"
+        >
+          <span
+            data-lucide="music-4"
+            class="w-[3rem] h-[3rem] xl:w-12 xl:h-12 block text-black bg-[#F9E076] rounded-[50%] p-2"
+          ></span>
+          <h3 class="uppercase text-2xl mt-[2rem] xl:mt-[3rem]">
+            Musicas boa
+          </h3>
+          <p class="text-center text-[#6b6b6b] mt-[1rem]">
+            Escute aos mais variados sucessos bregas e atuais enquanto aproveita o ambiente
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedbacks w-screen h-screen relative overflow-hidden">
+      <!-- Imagem de fundo -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="brooke-lark-wMzx2nBdeng-unsplash.jpg"
+          alt="Ambiente do bar"
+          class="w-full h-full object-cover filter sepia-50"
+        />
+      </div>
+
+      <!-- Overlay escuro -->
+      <div class="absolute inset-0 bg-black/30 z-1"></div>
+
+      <!-- Conteúdo do carrossel -->
+      <div
+        class="relative z-10 w-full h-full flex flex-col justify-center items-center px-4 xl:px-10"
+      >
+        <h2 class="text-5xl xl:text-7xl font-[500] text-white mb-6 xl:mb-10">
+          Feedbacks
+        </h2>
+
+        <div
+          class="carousel w-full max-w-4xl mx-auto relative h-[40vh] xl:h-[40vh] overflow-hidden"
+        >
+          <!-- Slides Container -->
+          <div
+            class="slides-container flex transition-transform duration-500 ease-in-out h-full"
+          >
+            <!-- Slides -->
+            <div class="slide min-w-full flex items-center justify-center px-4">
+              <p
+                class="text-center text-white text-sm xl:text-xl w-full max-w-3xl"
+              >
+                "Me aconselharam a ir no bar em um fim de semana, me disseram
+                que a feijoada de lá é muito barata e tem o melhor sabor de
+                todas. Quando cheguei lá realmente tudo isso era verdade, e tem
+                mais, o ambiente é extremamente agradável e limpo, eu me senti
+                super a vontade e feliz, tanto que nem percebi o tempo passando,
+                quando me dei conta já estava de noite, e aquele clima de
+                risadas e alegria continuava o mesmo de quando e cheguei"
+              </p>
+            </div>
+
+            <div class="slide min-w-full flex items-center justify-center px-4">
+              <p
+                class="text-center text-white text-sm xl:text-xl w-full max-w-3xl"
+              >
+                "Fui conhecer o bar do tio a convite de uns amigos, que não
+                paravam de falar do torresmo e da cerveja sempre trincando.
+                Quando cheguei, já fui recebido com um sorriso e aquele
+                cheirinho de comida boa no ar. O atendimento é nota mil, o
+                pessoal trata a gente como se fosse de casa. Comi, bebi, dei
+                risada e quando vi, já tinha até feito amizade com a mesa ao
+                lado. É o tipo de lugar que você vai uma vez e já vira cliente
+                fiel."
+              </p>
+            </div>
+
+            <div class="slide min-w-full flex items-center justify-center px-4">
+              <p
+                class="text-center text-white text-sm xl:text-xl w-full max-w-3xl"
+              >
+                "Sabadão, sol rachando, resolvi dar uma chance ao famoso bar do
+                tio que todo mundo comenta. Chegando lá, fui recebido como um
+                velho amigo, já puxaram uma cadeira, e sorriram dizendo: ‘relaxa, aqui você tá em casa’. Pedi a
+                feijoada e, meu amigo… que espetáculo! Dá vontade de bater
+                palmas entre uma garfada e outra. E o melhor: preço justo e
+                porção generosa. Saí de lá querendo recomendar pra todo mundo
+                que conheço."
+              </p>
+            </div>
+          </div>
+
+          <!-- Navegação -->
+          <div
+            class="flex justify-center mt-6 xl:mt-8 gap-3 absolute bottom-2 xl:bottom-0 left-0 right-0"
+          >
+            <button
+              class="carousel-dot bg-white/80 rounded-full w-2 h-2 xl:w-3 xl:h-3"
+              data-index="0"
+            ></button>
+            <button
+              class="carousel-dot bg-white/30 rounded-full w-2 h-2 xl:w-3 xl:h-3"
+              data-index="1"
+            ></button>
+            <button
+              class="carousel-dot bg-white/30 rounded-full w-2 h-2 xl:w-3 xl:h-3"
+              data-index="2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lucide -->
+    <!-- No final do body, mantenha apenas isto: -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script src="carrossel.js"></script>
+  </body>
+</html>
