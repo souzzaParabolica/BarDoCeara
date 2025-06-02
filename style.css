@@ -1,23 +1,23 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
  }
-
- body{
-    overflow-x: hidden;
- }
-
- .hero{
-    background-image: url(luca-bravo-8x_fFNrmeDk-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: sepia(.5);
- }
-
-
  
+ body {
+     overflow-x: hidden;
+ }
+
+ .hero {
+     background-image: url(luca-bravo-8x_fFNrmeDk-unsplash.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     filter: sepia(.5);
+ }
+
+
+
  /* Estilos do menu hamburger */
  .hamburger {
      display: block;
@@ -80,38 +80,109 @@
      cursor: pointer;
  }
 
- .card{
-    background-image: linear-gradient(45deg, #E4DFD9 50%, white);
-    border: 1px solid white;
+ .card {
+     background-image: linear-gradient(45deg, #E4DFD9 50%, white);
+     border: 1px solid white;
  }
 
-/* Remova as regras anteriores do .slide e adicione: */
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1), transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: opacity, transform;
-}
+ /* Remova as regras anteriores do .slide e adicione: */
+ .slide {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     opacity: 0;
+     transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1), transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+     will-change: opacity, transform;
+ }
 
-.slide.active {
-    opacity: 1;
-    transform: translateX(0);
-}
+ .slide.active {
+     opacity: 1;
+     transform: translateX(0);
+ }
 
-.slide.next {
-    transform: translateX(20px);
-}
+ .slide.next {
+     transform: translateX(20px);
+ }
 
-.slide.prev {
-    transform: translateX(-20px);
-}
+ .slide.prev {
+     transform: translateX(-20px);
+ }
 
-/* Ajustes para mobile */
-@media (max-width: 767px) {
-    .slide {
-        transition-duration: 600ms;
-    } }
+ 
+ /* Ajustes para mobile */
+ @media (max-width: 767px) {
+     .slide {
+         transition-duration: 600ms;
+     }
+ }
+
+
+ @media (min-width: 1920px) {
+
+    header{
+        padding-block: 2rem !important;
+    }
+
+    .titulo{
+         font-size: 3rem !important;
+     }
+
+     ul li {
+         font-size: 1.5rem;
+     }
+
+     .social-icons li svg {
+         width: 2rem;
+         height: 2rem;
+     }
+
+     .hero h2{
+        font-size: 7rem;
+     }
+
+     .hero p{
+        font-size: 3rem;
+     }
+
+     .secao1{
+        height: 100vh;
+     }
+
+     .secao1 h2 {
+         font-size: 3rem;
+         line-height: 4rem;
+     }
+
+     .secao1 p {
+         font-size: 1.5rem;
+     }
+
+     .card h3 {
+         font-size: 2.25rem;
+     }
+
+     .card svg {
+         width: 4rem;
+         height: 4rem;
+     }
+
+     .slide p {
+         font-size: 1.6rem;
+         max-width: 60rem;
+     }
+
+     .carousel-dot {
+         width: 1rem;
+         height: 1rem;
+     }
+
+     .botoes {
+         bottom: 1.5rem;
+     }
+
+     .feedbacks h2{
+        font-size: 7rem;
+     }
+ }
