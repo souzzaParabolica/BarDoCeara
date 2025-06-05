@@ -190,6 +190,6 @@ gsap.from(".feedbacks h2", {
     start: "top 50%",
     end: "top 20%",
     scrub: 1.2,
-    markers: true,
+    markers: false,
   },
 });
