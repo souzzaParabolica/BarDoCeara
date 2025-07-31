@@ -3,9 +3,9 @@
      padding: 0;
      box-sizing: border-box;
  }
- 
+
  body {
-     overflow-x: hidden;
+     overflow-x: hidden !important;
  }
 
  .hero {
@@ -83,6 +83,41 @@
  .card {
      background-image: linear-gradient(45deg, #E4DFD9 50%, white);
      border: 1px solid white;
+     transition: transform 0.3s ease;
+ }
+
+ svg {
+     animation: upDown 4s infinite;
+ }
+
+ .card h3,
+ .card p {
+     transition: all .3s ease-in-out;
+     transform: scale(1);
+ }
+
+ .card:hover {
+     transform: translateY(-5px) !important;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+     h3,
+     p {
+         transform: scale(1.05);
+     }
+ }
+
+ @keyframes upDown {
+     0% {
+         transform: translateY(0);
+     }
+
+     50%{
+         transform: translateY(-4px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
  }
 
  /* Remova as regras anteriores do .slide e adicione: */
@@ -110,7 +145,7 @@
      transform: translateX(-20px);
  }
 
- 
+
  /* Ajustes para mobile */
  @media (max-width: 767px) {
      .slide {
@@ -121,11 +156,11 @@
 
  @media (min-width: 1920px) {
 
-    header{
-        padding-block: 2rem !important;
-    }
+     header {
+         padding-block: 2rem !important;
+     }
 
-    .titulo{
+     .titulo {
          font-size: 3rem !important;
      }
 
@@ -138,16 +173,16 @@
          height: 2rem;
      }
 
-     .hero h2{
-        font-size: 7rem;
+     .hero h2 {
+         font-size: 7rem;
      }
 
-     .hero p{
-        font-size: 3rem;
+     .hero p {
+         font-size: 3rem;
      }
 
-     .secao1{
-        height: 100vh;
+     .secao1 {
+         height: 100vh;
      }
 
      .secao1 h2 {
@@ -167,6 +202,7 @@
          width: 4rem;
          height: 4rem;
      }
+
      .slide p {
          font-size: 1.6rem;
          max-width: 60rem;
@@ -181,7 +217,37 @@
          bottom: 1.5rem;
      }
 
-     .feedbacks h2{
-        font-size: 7rem;
+     .feedbacks h2 {
+         font-size: 7rem;
      }
+ }
+
+ .menu-hero{
+    background-image: url(cardápio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+ }
+
+ .txt-card{
+    z-index: 99 !important;
+ }
+
+ .book{
+    border: 2px solid white;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+ }
+
+ .book:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.03) translateY(-2px);
+ }
+
+ .book:active{
+    transform: scale(0.98) translateY(0);
+ }
+
+ .dish-list{
+    overflow-x: hidden;
  }

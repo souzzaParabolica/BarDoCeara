@@ -190,6 +190,46 @@ gsap.from(".feedbacks h2", {
     start: "top 50%",
     end: "top 20%",
     scrub: 1.2,
-    markers: true,
+    markers: false,
+  },
+});
+
+gsap.from(".menu-title", {
+  y: 50,
+  filter: "blur(2px)",
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".menu-section",
+    start: "top 20%",
+    end: "top 0%",
+    scrub: 1.2,
+    markers: false
+  },
+});
+
+gsap.from(".section-title", {
+  filter: "blur(2px)",
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".section-title",
+    start: "top 30%",
+    end: "top 20%",
+    scrub: 1.2,
+    markers: false,
+  },
+});
+
+gsap.from(".dishes-list .dish-item", {
+  x: 80,
+  filter: "blur(2px)",
+  opacity: 0,
+  duration: 3,
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".section-title",
+    start: "top 20%",
+    end: "top 0%",
+    scrub: 1.2,
+    markers: false,
   },
 });
