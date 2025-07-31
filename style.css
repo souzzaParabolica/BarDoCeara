@@ -248,6 +248,10 @@
     transform: scale(0.98) translateY(0);
  }
 
- .dish-list{
-    overflow-x: hidden;
+ .dish-list, .dish-item{
+    overflow-x: hidden !important;
+ }
+
+ .menu-section{
+    overflow-x: hidden !important;
  }
