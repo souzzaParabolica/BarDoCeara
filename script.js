@@ -202,7 +202,6 @@ gsap.from(".menu-title", {
     trigger: ".menu-section",
     start: "top 20%",
     end: "top 0%",
-    scrub: 1.2,
     markers: false
   },
 });
@@ -214,7 +213,6 @@ gsap.from(".section-title", {
     trigger: ".section-title",
     start: "top 30%",
     end: "top 20%",
-    scrub: 1.2,
     markers: false,
   },
 });
@@ -223,13 +221,12 @@ gsap.from(".dishes-list .dish-item", {
   x: 80,
   filter: "blur(2px)",
   opacity: 0,
-  duration: 3,
-  stagger: 1,
+  duration: .6,
+  stagger: .2,
   scrollTrigger: {
     trigger: ".section-title",
     start: "top 20%",
     end: "top 0%",
-    scrub: 1.2,
     markers: false,
   },
 });
